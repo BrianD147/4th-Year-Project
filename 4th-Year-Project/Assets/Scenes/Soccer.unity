@@ -125,8 +125,8 @@ GameObject:
   - component: {fileID: 13803136}
   - component: {fileID: 13803135}
   - component: {fileID: 13803134}
-  - component: {fileID: 13803131}
   - component: {fileID: 13803132}
+  - component: {fileID: 13803131}
   m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 13803134}
-  moveSpeed: 5
+  moveSpeed: 6
+  kickPower: 1
 --- !u!64 &13803132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1787,7 +1788,7 @@ GameObject:
   - component: {fileID: 1915926949}
   m_Layer: 9
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
