@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 13803136}
   - component: {fileID: 13803135}
   - component: {fileID: 13803134}
+  - component: {fileID: 13803131}
   - component: {fileID: 13803132}
   m_Layer: 13
   m_Name: Player
@@ -141,25 +142,39 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13803129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.360591, y: -0.24356484, z: 0.634552}
-  m_LocalScale: {x: 1.5, y: 2, z: 1.5}
+  m_LocalPosition: {x: -9.360591, y: 0, z: 0.634552}
+  m_LocalScale: {x: 1.5, y: 1.2, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1136414262}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &13803132
-SphereCollider:
+--- !u!114 &13803131
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 135686062229982952, guid: a2873bd187c924a4ba5beb217afde3ab,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 13803129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587d84f08fb63c548b1d40560c12bfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 13803134}
+  moveSpeed: 5
+--- !u!64 &13803132
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13803129}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &13803134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -219,7 +234,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13803129}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &26827233
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +729,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 572604204}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 54ed79b9254e1456587c8cf3849f6dc1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1820,11 +1835,11 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1915926945}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 54ed79b9254e1456587c8cf3849f6dc1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.55
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1915926950
 MeshRenderer:
