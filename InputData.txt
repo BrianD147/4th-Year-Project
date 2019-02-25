@@ -1,0 +1,65 @@
+/*
+ * 	------------------------------------------------------------------------
+ * 	Final Year Project
+ * 	------------------------------------------------------------------------
+ *
+ *   
+ * 
+ * 	  Number of Instances: 8
+ *
+ *	  Set of Outputs: (movement directions)
+ *	  ======================================================================
+ *	  	1. forward
+ *	  	2. forward right
+ *	  	3. right
+ *	  	4. backward right
+ *	  	5. backward
+ *	  	6. backward left
+ *	  	7. left
+ *	  	8. forward left
+ * 
+ *
+ * 	  Number of Attributes: 14 (2 player types, 12 numerics)
+ * 
+ *    Attribute Information: (name of attribute and type of value domain)
+ *    1. player type:  									Goalkeeper or Outfield (0-1)
+ *    2. distance to ball								Double
+ *    3. distance to own goal							Double
+ *    4. distance to opposition goal					Double
+ *    5. distance from closest opposition to ball		Double
+ *    6. distance from ball to own goal					Double
+ *    7. distance from ball to opposition goal			Double
+ *    8. distance from opposition to own goal			Double
+ *    9. distance from opposition to opposition goal	Double
+ *   10. type of opposition closest to ball				Goalkeeper or Outfield (0-1)
+ *   11. angle from ball								Double (0-360)
+ *   12. angle from ball to own goal					Double (0-360)
+ *   13. angle from ball to opposition goal				Double (0-360)
+ * 	 14. distance from closest wall to ball				Double
+ *
+ */
+ 
+ 30 x 15
+
+private double[][] data = { 
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+};
+
+private double[][] expected = { 
+		{ 1, 0, 0, 0, 0, 0, 0, 0 },  
+		{ 0, 1, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 1, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 1, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 1, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 1, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 1, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 1 }
+};	
+		
