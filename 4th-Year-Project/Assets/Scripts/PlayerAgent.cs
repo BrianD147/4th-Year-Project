@@ -110,5 +110,11 @@ public class PlayerAgent : Agent {
             c.gameObject.GetComponent<Rigidbody>().AddForce(dir * force); // apply the force to the ball in the correct direction
         }
 
+        //If the player collides with the slopes on the sides, ignore them as we dont want the player getting stuck to the slope - only needed so the ball does not get stuck
+        if (c.gameObject.tag == "slope")
+        {
+            Physics.IgnoreCollision(c.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+
     }
 }

@@ -22,5 +22,10 @@ public class ResetBall : MonoBehaviour {
 			transform.position = new Vector3(0f, 1.5f, 0f);
         }
 
+		if (c.gameObject.tag == "blueGoal")
+        {
+			transform.position = new Vector3(0f, 1.5f, 0f);
+        }
+
     }
 }
