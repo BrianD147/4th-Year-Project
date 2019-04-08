@@ -45,6 +45,8 @@ public class PlayerAgent : Agent {
         // Calculate relative position of the target (ball) in relation to the player
         Vector3 relativePosition = Target.position - this.transform.position;
 
+        //Debug.Log(relativePosition.x);
+
         // Relative position
         AddVectorObs(relativePosition.x/5);
         AddVectorObs(relativePosition.z/5);
@@ -79,7 +81,7 @@ public class PlayerAgent : Agent {
         }
 
         // Time penalty
-        AddReward(-0.05f);
+        AddReward(-0.005f);
 
         // Fell off platform
         if (this.transform.position.y < -2.0)
