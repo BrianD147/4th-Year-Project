@@ -9,6 +9,9 @@ TagManager:
   - ball
   - slope
   - canvas
+  - TargetPosition
+  - bluePlayer
+  - redPlayer
   layers:
   - Default
   - TransparentFX
