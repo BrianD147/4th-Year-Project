@@ -12,16 +12,17 @@ public class AimForGoal : MonoBehaviour {
 	
 	private Vector3 redGoalArea = new Vector3(11, 0, 0);
 	private Vector3 blueGoalArea = new Vector3(-11, 0, 0);
+	
 
 	// Use this for initialization
 	void Start () {
 		ball = GameObject.FindWithTag("ball");
 
-		if(gameObject.tag == "bluePlayer" || gameObject.tag == "blueGoalie"){
-			Debug.Log("Blue Player");
+		if(gameObject.tag == "bluePlayer" || gameObject.tag == "blueGoalie" || gameObject.tag == "blueDefender"){
+			//Debug.Log("Blue Player");
 			targetGoal = GameObject.FindWithTag("redGoal");
-		} else if (gameObject.tag == "redPlayer" || gameObject.tag == "redGoalie"){
-			Debug.Log("Red Player");
+		} else if (gameObject.tag == "redPlayer" || gameObject.tag == "redGoalie" || gameObject.tag == "redDefender"){
+			//Debug.Log("Red Player");
 			targetGoal = GameObject.FindWithTag("blueGoal");
 		}
 		targetPosition = GameObject.FindWithTag("TargetPosition");
@@ -29,8 +30,6 @@ public class AimForGoal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-
 		Vector3 dir = ball.transform.position - targetGoal.transform.position;
  		dir = dir.normalized;
 		targetLocation = ball.transform.position + dir;
@@ -40,18 +39,29 @@ public class AimForGoal : MonoBehaviour {
 		//Debug.Log("Target: " + targetLocation);
 
 		//targetPosition.transform.position = targetLocation;
+		
+		if(gameObject.tag == "redDefender"){
+			if(ball.transform.position.x < redGoalArea.x && ball.transform.position.x > -0.5){
+				Debug.Log("Red Defenders Area");
+				Move();	
+			}
+		}
+		if(gameObject.tag == "blueDefender"){
+			if(ball.transform.position.x > blueGoalArea.x && ball.transform.position.x < 0.5){
+				Debug.Log("Blue Defenders Area");
+				Move();	
+			}
+		}
 		if(gameObject.tag == "bluePlayer"){
-			if(ball.transform.position.x > redGoalArea.x){
-				Debug.Log("Red Goal Area");
-			}else{
-				Move();			
+			if(ball.transform.position.x > -0.5){
+				Debug.Log("Blue Striker Area");
+				Move();	
 			}
 		}
 		if(gameObject.tag == "redPlayer"){
-			if(ball.transform.position.x < blueGoalArea.x){
-				Debug.Log("Blue Goal Area");
-			}else{
-				Move();			
+			if(ball.transform.position.x < 0.5){
+				Debug.Log("Red Striker Area");
+				Move();	
 			}
 		}
 		if(gameObject.tag == "blueGoalie"){
