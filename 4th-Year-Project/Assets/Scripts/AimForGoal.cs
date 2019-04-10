@@ -9,6 +9,9 @@ public class AimForGoal : MonoBehaviour {
 	private GameObject targetGoal;
 	private Vector3 targetLocation;
 	private GameObject targetPosition;
+	
+	private Vector3 redGoalArea = new Vector3(11, 0, 0);
+	private Vector3 blueGoalArea = new Vector3(-11, 0, 0);
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +40,19 @@ public class AimForGoal : MonoBehaviour {
 		//Debug.Log("Target: " + targetLocation);
 
 		//targetPosition.transform.position = targetLocation;
-		transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+		if(gameObject.tag == "bluePlayer"){
+			if(ball.transform.position.x > redGoalArea.x){
+				Debug.Log("Red Goal Area");
+			}else{
+				transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+			}
+		}
+		if(gameObject.tag == "redPlayer"){
+			if(ball.transform.position.x < blueGoalArea.x){
+				Debug.Log("Blue Goal Area");
+			}else{
+				transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+			}
+		}
 	}
 }
