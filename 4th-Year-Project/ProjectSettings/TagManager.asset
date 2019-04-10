@@ -12,6 +12,8 @@ TagManager:
   - TargetPosition
   - bluePlayer
   - redPlayer
+  - blueGoalie
+  - redGoalie
   layers:
   - Default
   - TransparentFX

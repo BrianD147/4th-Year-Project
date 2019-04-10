@@ -17,10 +17,10 @@ public class AimForGoal : MonoBehaviour {
 	void Start () {
 		ball = GameObject.FindWithTag("ball");
 
-		if(gameObject.tag == "bluePlayer"){
+		if(gameObject.tag == "bluePlayer" || gameObject.tag == "blueGoalie"){
 			Debug.Log("Blue Player");
 			targetGoal = GameObject.FindWithTag("redGoal");
-		} else if (gameObject.tag == "redPlayer"){
+		} else if (gameObject.tag == "redPlayer" || gameObject.tag == "redGoalie"){
 			Debug.Log("Red Player");
 			targetGoal = GameObject.FindWithTag("blueGoal");
 		}
@@ -29,7 +29,7 @@ public class AimForGoal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float step = speed * Time.deltaTime;
+		
 
 		Vector3 dir = ball.transform.position - targetGoal.transform.position;
  		dir = dir.normalized;
@@ -44,15 +44,32 @@ public class AimForGoal : MonoBehaviour {
 			if(ball.transform.position.x > redGoalArea.x){
 				Debug.Log("Red Goal Area");
 			}else{
-				transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+				Move();			
 			}
 		}
 		if(gameObject.tag == "redPlayer"){
 			if(ball.transform.position.x < blueGoalArea.x){
 				Debug.Log("Blue Goal Area");
 			}else{
-				transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
+				Move();			
 			}
 		}
+		if(gameObject.tag == "blueGoalie"){
+			if(ball.transform.position.x < blueGoalArea.x){
+				//Debug.Log("Blue Goal Area");
+				Move();			
+			}
+		}
+		if(gameObject.tag == "redGoalie"){
+			if(ball.transform.position.x > redGoalArea.x){
+				//Debug.Log("Red Goal Area");
+				Move();
+			}
+		}
+	}
+
+	void Move(){
+		float step = speed * Time.deltaTime;
+		transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
 	}
 }
