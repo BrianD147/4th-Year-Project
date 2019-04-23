@@ -2,131 +2,16 @@
 
 \chapter{Introduction}
 
-% May need another look at
+\section{Overview}
+This chapter will outline the context and scope of the project. It will explain the objectives we had for the project and the specifications for the software, as well as detail our initial ideas and thoughts behind the design and it's implementation.
 
 \section{Idea}
-
-*****
-
-This chapter will outline the context and scope of the project. It will explain the objectives we had for the project and the specifications for the software, aswell as detail our initial ideas and thoughts behind the design and it's implimentation.
-
-At the begining of our 4th year in Software Development, we were tasked with coming up with an idea that would be suited to a level 8 final year project, so we knew we would have to design something that combined multiple different technologies and languages, and also challenged our own knowledge thus far. Our decision on what we were going to design sparked into life while we were exploring different possibilities of what to develop and what platform and languages we could work with. We stumbled upon a videa from an event called the "Robocup", where teams of Artificially Intelligent Robots would play a game of soccer. After seeing this and being inspired, we eventually settled on the idea to develop some form of AI controlled agent. We had no experience with physical hardware like the Robocup utilised, and we wanted to find an environment that would suit what we aimed to do. For this reason, we decided to used the Unity game engine environment to act as the base for our AI controlled agents. We had the option to used Unity in a previous years module, however we had never really delved into the environment in much detail, and thus we still had a lot to learn about Unity's inner workings and plugins.
+At the beginning of our 4th year in Software Development, we were tasked with coming up with an idea that would be suited to a level 8 final year project, so we knew we would have to design something that combined multiple different technologies and languages, and also challenged our own knowledge thus far. Our decision on what we were going to design sparked into life while we were exploring different possibilities of what to develop and what platform and languages we could work with. We stumbled upon a video from an event called the "Robocup", where teams of Artificially Intelligent Robots would play a game of soccer. After seeing this and being inspired, we eventually settled on the idea to develop some form of AI controlled agent. We had no experience with physical hardware like the Robocup utilised, and we wanted to find an environment that would suit what we aimed to do. For this reason, we decided to used the Unity game engine environment to act as the base for our AI controlled agents. We had the option to used Unity in a previous years module, however we had never really delved into the environment in much detail, and thus we still had a lot to learn about Unity's inner workings and plugins.
 
 In order to control our AI agents, we would need to design a neural network somehow. We knew we were going to have a module in AI during our second semester, however at the time we had never touched anything to do with AI or neural networks, and our research into the field seemed to point us towards using python. Python seemed to be perfect to design the machine learning side of our project, as the language has a vast array of open source libraries free for us to use.
 
 In the end we finished up our research and design with an idea to create a 3d Unity environment of a football stadium, with AI controlled agents playing football logically, all controlled by a python neural network externally to the Unity environment.
 
-Objectives
-The objectives of this project are:
-
-- Design a working 3d environment in Unity to best suit our needs
-- Find a way to connect Unity and python together, allowing for data to be transfered between both the environment and the external code
-- Pass movements into the Unity environment using the external code
-- Pull observations from the Unity environment back into the external code
-- Control the agents using the external neural network
-
-Chapter Summaries
-
-Introduction
-This chapter contains the context for the entire project covering where the idea came from, what the project is about, what the objectives are for the project going forward, and the location and different elements of our GitHub Repository.
-
-Methodology
-This chapter describes the way the project was approached and managed. It also gives a description of how the project was researched and developed.
-
-Technology
-This chapter discussed the technologies that were researched and used in our project. It gives an insight into why the technologies used were chosen and what alternatives could have been used.
-
-System Design
-This chapter gives an explanation of how the entire system architecture was designed and how it all connects together. Diagrams are provided to further explain each individual element of the system.
-
-System Evaluation
-This chapter evaluates the project and the progress that was made towards it's completion, and highlights where the project could have been improved upon. It discussed the problems faced and the impact these had on the development of the project.
-
-Conclusion
-The conclusion gives a summary of our findings, outcomes and experiences we all had during the development of this project.
-
-GitHub Repository
-The GitHub repository for this project can be found at 
-https://github.com/BrianD147/4th-Year-Project.
-The sections below describe the different components in the repository and a link to each part
-
-
-ReadMe
-This contains a brief introduction and description of each component of the system.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/README.md
-
-
-4th-Year-Project
-This contains the main Unity environment code used to design the 3d stadium environment and the agents. 
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/tree/master/4th-Year-Project
-
-
-Project Dissertation
-This contains the latex files relating to our project dissertation.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/tree/master/Project-Dissertation
-
-
-ml-agents
-This contains the mlagents python package, which is part of the ML-Agents Toolkit. This is a Python API that allows direct interaction with the Unity game engine as well as a collection of trainers and algorithms to train agents in the Unity environment.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/tree/master/ml-agents
-
-
-notebooks
-This contains jupyter notebooks used to run the python scripts and connect them to the Unity environment, with help from the ml-agents Python API.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/tree/master/notebooks
-
-
-Group Project 2018
-This contains an initial document stating our initial goal and a roadmap we wished to adhere by as development progressed.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/Group%20Project%202018.docx
-
-
-IronPythonVSML-Agents
-This contains a document comparing the IronPython plugin with ML-Agents and discussing the advantages ML-Agents has over IronPython, concluding in our reasons for choosing ML-Agents going forward.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/IronPythonVSML-Agents.docx
-
-
-FYP Spitballing
-This contains a document going over our plans for the dissertation structure.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/FYP%20Spitballing.docx
-
-
-InputData
-This contains a file stating the input data and attributes intended to be passed into the neural network, and the set of outputs the network would output. Along with template data arrays for inputs and outputs.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/InputData.txt
-
-
-Setup for Player Controller
-This contains a brief explaination of how user controlled movement can be incorporated into the ML-Agents Academy and Brain prefabs.
-
-This section can be found here - https://github.com/BrianD147/4th-Year-Project/blob/master/Setup%20for%20Player%20Controller.docx
-
-*****
-
-At the beginning of our 4th year in Software Development, we were tasked with coming up with a project idea that would challenge our knowledge. ------
-The idea came about when we were exploring different possibilities on what to develop, what platform to develop it on and what languages could we explore. We were encouraged to develop this on a platform or language we were not used to, so we tried to aim for something that was new to us. We stumbled upon a video from an event called the “Robocup”, where teams of Artificially Intelligent Robots would play a game of soccer. After seeing this, we eventually settled on the idea that would develop some form of AI controlled agent. We had no experience in the hardware side of development, we went to find an environment that would best suit what we wanted, and that when we decided on using Unity.
-
-
-We decided on using both Unity and Python for this project as the environment Unity provided made it the perfect playground to design our agents and the stadium, and the use of python for the Machine learning due to its vast amount of open source libraries available to use.
-
-With our technologies picked we set out at list of goals we wanted this project to achieve. 
-\begin{itemize}
-  \item Create a working environment in unity suitable to our desires
-  \item Find a way to have Unity and Python communicate
-  \item Get a single agent moving in the unity environment through python
-  \item Train an agent using a neural network
-  \item Have more than one agent moving in the work environment
-  \item Have designated positions for each agent
-\end{itemize}
 
 \section{The Application}
 This application is a simulation of agents moving independently in a 3D through a neural network developed using python. We plan to have these agents recognize the object around them in the environment and use these to their advantage. With this we hope to add some personalities to each of these agents so that they make decisions based on what position they are in, and what to prioritize when in certain situations. We also hope to implement a win condition so that the simulation stops after a certain amount of time has passed or a certain amount of goals has been scored by a single team or agent.
