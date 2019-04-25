@@ -14,8 +14,6 @@ In this section we will review our approach to the project development, describe
 
 For this project we wanted to use an iterative design process, so changes and issues could easily be kept track of and dealt with in an easy and efficient manner. As such we felt the Agile method to be the best fit for us, as one of the team members has had previous experience in industry during a summer internship. His first hand experience helped guide us throughout the project, and gave the rest of us a feel on how it may be like to work in industry in the future.
 
-(Definitions? Scrum master, stand up, etc)
-
 The Agile method is a particular approach to project management, which is ubiquitous in the environment of Software Development. This method assists teams in responding to the unpredictability of constructing software, such as bugs in code, changing requirements from the client, etc. Agile uses incremental/iterative work sequences commonly known as Sprints, which is a period of time allocated for a particular phase of a project. Time is a precious resource when developing software, and as such a Sprint is considered complete once the time period expires. While some objectives set out for the Sprint may not have been realised, these additions will need to be put on the back burner in order to keep up with the Agile development cycle.
 
 While we liked the approach the Agile method allowed us to use, we did not adhere to it in the strictest of senses. For instance, we did not appoint someone to the role of Scrum Master, preferring a more group oriented approach to problem solving and troubleshooting. A Scrum Master would be more suited to an industry environment, where they could be used as a point of contact or cohesion between large teams with differing responsibilities.
@@ -47,36 +45,39 @@ Some general principles of Agile include:
 	For our environment we settled on the Unity game engine, in which we had some previous experience in a different module. This environment allowed us to create a 3D framework for the agents, so progress could be visualized as well as documented in a traditional way. 
 	
 	For our language of choice we settled on Python, due to the apparent ubiquity of the language in machine learning and data modelling circles, as well as the comprehensive standard library and open source libraries it offered.
-	
-	Initially we had planned on using IronPython for the logic behind the agents, but ultimately felt that it wasn't what we were looking for in our project. As such we chose a different route, namely with the ML-Agents Toolkit and Jupyter Notebooks.
 
 	The ML-Agent Toolkit is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. We felt the addition of the Toolkit would take much of the hassle out of creating a machine learning framework ourselves.
 	
 	To still make use of the Python language itself we made used  Jupyter Notebooks to pass information to and from unity/ML-Agents. We also had previous experience with Jupyter Notebooks from another module, so felt comfortable working with this program.
 	
-	With the basics gathered it was time 
+	More information on this subject can be found later, in the "Technology" section.
+	
+	With the basics gathered it was time to move onto development
 	
 
-\section{Sprint 3: Development 1}
+\section{Sprint 3: Initial Development}
 	Set up environment, Github, etc
 	
 	Once we had established a framework we were happy with work finally began on the foundations of the project. To tackle the problem of version control we utilized GitHub, which we have had extensive experience using in the past. Group members were then added as collaborators, so we could work on the project in unison.  Once the blank Unity environment was created it was pushed to the Github, as well as any relevant research materials we had to date.
-	(Ryan - notebooks, Brian - Unity, James, - ML-Agents)
+	
+	The task of setting up the Jupyter Notebooks, Unity and ML-Agents fell to Ryan, Brian and James respectively.
+	
 
-\section{Sprint 4: Development 2}
+\section{Sprint 4: Integration and Testing}
 	Integration testing of ML-Agents, Unity, Notebooks, etc
 	
-	The next sprint focused on the integrating and testing of the various technologies and platforms we had chosen.
+	The next sprint focused on the integration and testing of the various technologies and platforms we had chosen. 
 	
+	The application works by using Unity to "host" the ML-Agents toolkit, as it is essentially a Unity add-on in itself. Data within the ML-Agents Toolkit is passed to and from the Jupyter notebooks. The Notebook is used as a connector, staging blocks of code to execute in sequence so Unity doesn't become overloaded, as well as ease of debugging later.
+
+\section{Sprint 5: Functionality and Testing}
+	***Problems encountered with our approach
 	
+	This Sprint focused on the crux of the project, controlling agents in a meaningful manner using Artificial Intelligence, and also where we encountered our issue.
 
-\section{Sprint 5: Development 3}
+\section{Sprint 6: Cleanup \& Dissertation} 
 
-\section{Sprint 6: Development 4}
-	Final testing, padding out functionality
-
-\section{Sprint 7: Cleanup \& Dissertation} 
-	Writing up dissertation
+	The final Sprint was focused on project cleanup, as well as work on our accompanying minor dissertation.
 
 
 
