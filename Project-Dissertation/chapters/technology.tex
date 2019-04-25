@@ -69,6 +69,69 @@ In this image we see both cells after being executed. The number "1" to the left
 
 %end
 
+Technologies Review:
+This chapter will discuss in detail the technologies that we utilised in the project. It will also provide examples of the research we did into the different types of possible technologies. It will also highlight the rationale behind the decisions we made to use certain technologies over others.
+
+Game Engines:
+In this section, we will discuss the possible game engines we can use to run our environment in. We don't want to try use actual hardware and would prefer to run our environment in a game engine.
+
+Unity
+
+Unity is a real-time game engine developed by Unity Technologies and released back in June of 2005. Originally designed as an OSX-excluseive game engine, the software has been developed upon and extended to support a host of other platforms also. Unity has made a name for itself, making game development accessible to everyone, as shown by the sheer amount of indie game developers using Unity as there main game engine tool.
+
+Why use Unity
+The main pull Unity has over other game engines is it's ease of use, the software has been designed to make it easy to design games from the ground up, with easy to understand UI and an overall aim to create functional, smart, and sometimes simple games, rather than complex games with high quality graphics. Also the fact that the software is free to download and use is a big plus.
+
+Unreal Engine
+Unreal Engine was developed alongside it's debut title "Unreal" in 1998 by Epic Games. The game engine has kept a reputation of it being a high end piece of software, both due to it's price plans, and it's ability to generate incredible graphics.
+
+Why use Unreal
+The software has had some problems in the past with it's steep learning curve. Certainly not a beginners piece of software, however if someone who has had previous experience with coding and other 3d programs is looking to create a highly detailed expansive game, they need look no further than Unreal Engine.
+
+Our decision
+We decided to use Unity over Unreal Engine, firstly because of the learning curve. We had the opportunity to use Unity previously in a module, so we all had a slight bit of experience. Also the fact Unity is completly free, whereas Unreal Engine requires a payment plan to be set up, was what finally sold us on using Unity.
+
+
+Neural Network Languages:
+In this section we will discuss the different languages we reviewed to write our neural network in. The following programming languages have all been noted as strong languages for neural network design.
+
+Python
+Created by Guido van Rossum, Python is a high level, general purpose programming language first released in 1991. Pythons design philosophy emphasizes code readability, meaning the language utilises a significant amount of white space. The language supports multiple programming paradigms, so programs written procedurally will work just as well as an object oriented program design.
+
+Why Python 
+Simplicity is a major factor when talking about neural network design, so having a language that's easy to understand, aswell as the fact that python has an extreamly large library of useful framworks to utilise makes it a very strong choice.
+
+R
+R is a programming language and software environment used for statistical computing, and is great for producing informative graphics and data mining. Origionally introduced back in 1993, the language has stuck around due to it's presence as a truely general purpose programming language.
+
+Why R
+Although R doesn't originally apear to be a language that would suit neural network design, the sheer amount of libraries that R boasts, including RODBC, Gmodels, and Tm, which are all used in the field of machine learning, means the language actually has a strong case for being the correct one to use.
+
+Lisp
+Lisp is a family of programming languages, originally specified way back in 1958. It is the second oldest high level programming language that is still in widespread use today. John McCarthy, the inventor of the language, is actually known as the father of Artificial Intelligence, and many of the languages features have been inplimented and migrated over into more modern programming languages.
+
+Why Lisp
+Apart from it's inventor harolding the title of the father of AI, Lisp actually became the favoured language for AI development and research shortly after it's introduction.
+
+Our decision
+We decided to use Python as our language to build the neural network in due to the fact that the language is currently considered to be on top when it comes to AI development. Even though R and Lisp both were strong candidates for what language to use, the fact that Python is designed to be so simplistic and easy to understand made it the best choice for us, as we would need to be able to get our heads around the inner workings of neural networks quickly.
+
+Connector Software:
+In this section we will discuss the possible ways to connect the neural network code to the game engine environment.
+
+Jupyter Notebooks
+The Jupyter Notebook App is a server-client application that allows the editing and running of notebook documents via a web browser. Notebook documents are produced by the App and can contain both computer code aswell as rich text elements. These documents acts as executables which can run whatever code they consist of.
+
+Why Jupyter Notebooks
+We have had previous experience with notebooks, using them in a previous module, so we already have an understanding of their inner workings. We also found plenty of examples of other people connecting game engine environments to  external code. Having a previous understanding of the ins and outs of these notebook documents will be a great advantage to using notebooks as a connector between the environment and external code.
+
+
+Transmission Control Protocol connection
+TCP is one of the main protocols of the Internet protocol suite. TCP provides a reliable, ordered, and error-checked delivery of a stream of bytes between applications communicating via an IP network. 
+
+Why Transmission Control Protocol
+A TCP connection has been attempted to connect a game engine environment to external neural network code by others. We found some examples of other attempts, with some positive results. The bonus to using a TCP connection would be the fact that literally anything could be passed between the environment and the external code. Json objects could be passed back and forth meaning any input needed for the neural network, and subsequent output, could all be passed back and forth with ease, once a connection between the two had been established.
+
 \section{XML}
 Here's some nicely formatted XML:
 \begin{minted}{xml}
