@@ -137,88 +137,62 @@ TCP provides a reliable, ordered, and error-checked delivery of a stream of byte
 \subsubsection{Why Transmission Control Protocol}
 A TCP connection has been attempted to connect a game engine environment to external neural network code by others~\cite{UnityTCP}. We found some examples of other attempts, with some positive results. The bonus to using a TCP connection would be the fact that literally anything could be passed between the environment and the external code. Json objects could be passed back and forth meaning any input needed for the neural network, and subsequent output, could all be passed back and forth with ease, once a connection between the two had been established.
 
-Our Decision
+\subsubsection{Our Decision}
 We decided to use Jupyter Notebooks as our connection between the game engine environment and the external code since we have already had some experience with the application, as well as the fact that compaired to a TCP connection, using a notebook should be much simpler to initialise, since if we were to attempt a TCP connection, an IP network would have to be initialised to run the project on, which could lead to difficulties, and we would prefer to use something we know can work.
 
-%new
-ML-Agents
-ML-Agents is a new open-source Unity plugin designed by Unity themselves, which aims to provide an expansive toolkit within the Unity environment to help with the development of machine learning. The software enables games and simulations to serve as environments for training AI agents. 
-
-Why ML-Agents
-Using ML_Agents is the perfect choice for us, since we have decided to use the Unity engine to develop our 3d environment in. The documentation for ML-Agents shows us exactly how we could use this plugin to aid us in creating agents in our Unity environment.
-
-
-
-
-
-
-IronPython
+\subsubsection{IronPython}
 IronPython is an open-source implementation of Python. The implementation uses the .NET framework, as well as the entire suite Python libraries. The class library also contains language interoperability, meaning each language can use code written in another language.
 
-Why IronPython
+\subsubsection{Why IronPython}
 IronPython having the ability to use the .NET framework could work well for us connecting our environment to our external code. The .NET framework’s expansive class library has plenty of useful resources that we could utilise.
 
+\subsection{ML-Agents}
+ML-Agents is a new open-source Unity plugin designed by Unity themselves, which aims to provide an expansive toolkit within the Unity environment to help with the development of machine learning. The software enables games and simulations to serve as environments for training AI agents. 
 
+\subsubsection{Why ML-Agents}
+Using ML-Agents is the perfect choice for us, since we have decided to use the Unity engine to develop our 3d environment in. The documentation for ML-Agents shows us exactly how we could use this plugin to aid us in creating agents in our Unity environment.
 
-
-
-
-
-
-
-Neural network libraries
+\subsection{Neural network libraries}
 In this section we will discuss the possible neural network libraries we could utilise in our project. Using a machine learning library could be very useful for developing our neural network and ML models, as well as offer easier debugging options for testing.
 
-TensorFlow
+\subsubsection{TensorFlow}
 TensorFlow is an end-to-end open source platform for machine learning. Its flexible ecosystem of tools, libraries and resources allow for easy development and deployment of ML powered applications.
-
-Why Tensorflow
+%Maybe mention numpy/keras
+\subsubsection{Why Tensorflow}
 Tensorflow is a very well-known platform for ML powered applications. Having a platform that we can use to train models easily could be very useful when designing our own models.
 
-Sony’s neural network libraries
+\subsubsection{Sony’s neural network libraries}
 Neural Network Libraries by Sony is an open source software aiming to make research, development and implementation of neural networks more efficient.
 
-Why Sony’s neural network libraries
+\subsubsection{Why Sony’s neural network libraries}
 Having a fully optimised library of ML related code could be extremely useful when designing and implementing our own neural network. Although the software isn’t as widespread as TensorFlow, it could be better suited for our needs.
 
-Our Decision
+\subsubsection{Our Decision}
 We decided to have TenserFlow as our go to neural network library for two main reasons. Firstly, Sony’s neural network libraries aren’t as widely used as TenserFlow, meaning examples and other documentation is harder to come by. And secondly, we started a module in our course which utilises TensorFlow, meaning we are already starting to learn what the libraries can be used for and how we could adapt it into our own project if needed.
 
-Unity Test Tools 
+\subsection{Unity Test Tools} 
 Unity Test Tools is a test framework for any games and interactive content made in Unity. The framework is built to feel like a natural extension of the Unity Editor, so everything should be intuitive to anyone with experience using the Editor itself.
 
-
-Why Unity Test Tools
+\subsubsection{Why Unity Test Tools}
 The fact that these tools are easily accessible from the Unity asset store, as well as the fact they were designed by the Unity developers themselves, means they will work perfectly with the environment we build.
 
-Our decision
+\subsubsection{Our decision}
 We decided the use of the Unity Test Tools would actually not be very useful, since the fact that the majority of the work being performed will be external to the Unity environment. Having test data from just the environment itself isn’t necessary for the type of project we are aiming to create.
 
-
-
-
-
-%new
-
-
-Docker
+\subsection{Docker}
 Docker is a tool designed to help create, deploy and run applications. The tool uses containers to package all the necessary components, including libraries and other dependencies, into one single package. This means that any developer can rest assured the application will run on any machine.
 
-Why Docker
+\subsubsection{Why Docker}
 Using Docker would allow us to focus on the coding and development of the project, without having to worry about the system that our application will ultimately be running on. Having everything packaged together would help with the final deployment of the project, guaranteeing the entire project would run on any system without a shadow of a doubt.
 
-Our Decision
+\subsubsection{Our Decision}
 In the end we decided not to work using Docker, even though the tool is very intriguing and would be a major help running the project in the later stages, through some research we found complaints that the containers can be subject to performance overhead, and with our project, running the simulations at a consistent rate is very important. Also our project consists of multiple possible scenes and scenarios to run from multiple different notebooks, meaning that using Docker wouldn’t allow the final user to run whichever scenario they wishes, as Docker uses a single command to run it’s packages content, and doesn’t offer the ability to run multiple different parts of its package independently for the final user.
 
-
-Anaconda
+\subsection{Anaconda}
 Anaconda is a free and open-source distribution of Python and R programming languages for scientific computing, including machine learning applications. The distribution aims to simplify package management and deployment, offering over 1400 data-science packages.
-Why Anaconda
+
+\subsubsection{Why Anaconda}
 Anaconda would offer an easy and efficient way for us to gather the necessary packages for our machine learning needs. If we decide to use either Python or R as our programming language of choice, then Anaconda may be a great option for us.
 
-Our Decision
+\subsubsection{Our Decision}
 We decided to utilise Anaconda since we are using Python to build the neural network side to our project. The distribution includes matplotlib, numpy, and keras, which we aim to also use in our project, meaning Anaconda will be very helpful in installing these packages.
-
-
-
-%new
