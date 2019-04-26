@@ -16,6 +16,8 @@
 Below is a link to our screencast of the project in action
 
   https://youtu.be/Ovx2jGfz4gY
+  
+The video is also present in this repo under "FYPScreencast"
 
 ### Introduction
 This application is a simulation of agents moving independently in a 3D through a neural network developed using python. We plan to have these agents recognize the object around them in the environment and use these to their advantage. With this we hope to add some personalities to each of these agents so that they make decisions based on what position they are in, and what to prioritize when in certain situations. We also hope to implement a win condition so that the simulation stops after a certain amount of time has passed or a certain amount of goals have been scored by a single team or agent.
