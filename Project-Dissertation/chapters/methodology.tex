@@ -54,7 +54,7 @@ Some general principles of Agile include:
 	For our environment we settled on the Unity game engine, in which we had some previous experience in a different module. This environment allowed us to create a 3D framework for the agents, so progress could be visualized as well as documented in a traditional way. For our language of choice we settled on Python, due to the apparent ubiquity of the language in machine learning and data modelling circles, as well as the comprehensive standard library and open source libraries it offered.
 
 	The ML-Agent Toolkit is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. We felt the addition of the Toolkit would take much of the hassle out of creating a machine learning framework ourselves.To still make use of the Python language itself we made used  Jupyter Notebooks to pass information to and from unity/ML-Agents. We also had previous experience with Jupyter Notebooks from another module, so felt comfortable working with this program.
-	More information on this subject can be found later, in the "Technology" section.With the basics gathered it was time to move onto development.
+	More information on this subject can be found later, in the "Technology" section.With the basics gathered it was time to move onto initial development.
 	
 
 \section{Sprint 3: Initial Development}
@@ -66,7 +66,8 @@ Some general principles of Agile include:
 	
 	Documentation on ML-Agents was scoured over in order to integrate it into Unity, which required the use of the Jupyter Notebooks themselves. It was at this stage the team understood how interconnected these individual processes needed to be in order for the project to operate efficiently.
 	
-	An environment in Unity was created for our initial testing purposes, namely a small football pitch with translucent walls and a ceiling, so any chances of assets "escaping" the testing area were minimized. This environment also contained the two goals that would be used by the opposing teams. Next came the creation of other assets, namely the ball itself and the first agent. By now the project seemed to be taking shape.
+	An environment in Unity was created for our initial testing purposes, namely a small football pitch with translucent walls and a ceiling, so any chances of assets "escaping" the testing area were minimized. This environment also contained the two goals that would be used by the opposing teams. Next came the creation of other assets, namely the ball itself and the first agents. By now the project seemed to be taking shape. Next, we move onto integration and testing.
+	
 	
 
 \section{Sprint 4: Integration and Testing}
@@ -76,32 +77,21 @@ Some general principles of Agile include:
 	
 	The application works by using Unity to "host" the ML-Agents toolkit, as it is essentially a Unity add-on in itself. Data within the ML-Agents Toolkit is passed to and from the Jupyter notebooks. The Notebook is used as a connector, staging blocks of code to execute in sequence so Unity doesn't become overloaded, as well as ease of debugging later.
 	
+	After some time testing and debugging we finally had all three individual components integrated into one cohesive application. During this time we passed random values to the agents in the environment, in order to test the robustness of the Jupyter Notebooks in passing values, and to see how the agents reacted in the environment.
+	
 	One issue encountered during this sprint was in relation to ML-Agents, and how GitHub handles large files. This caused a blocking issue within the sprint, which meant all of the members of our team could not progress until this issue was resolved. 
 	
 	This issue was eventually resolved by adding the necessary folder to a public google drive address that anyone can access. The wiki on the GitHub page explains how to implement this folder into the project and contains a link to the google drive where it is stored.
 
+
 \section{Sprint 5: Functionality and Testing}
-	***Problems encountered with our approach
 	
-	This Sprint focused on the crux of the project, controlling agents in a meaningful manner using Artificial Intelligence, and also where we encountered our issue.
+	This Sprint focused on the crux of the project, controlling agents in a meaningful manner using Artificial Intelligence, and also where we encountered our issue. These issues can be read about in detail below, in the "Conclusion" section. 
 	
-	***More
+	During this time we focused on a final code review, adding elements that we felt were necessary in order to explain our project and its intentions, or adding more to our current code base and design in order to provide clarity.
+	Time was also spent making note of areas in which our project or write up may not have been up to scratch, and added any issues to the workload for the final sprint.
+
 
 \section{Sprint 6: Cleanup \& Dissertation} 
 
-	The final Sprint was focused on project cleanup, as well as work on our accompanying minor dissertation.
-	
-	***More on final sprint, tidy up, additions, etc
-
-
-
-\begin{figure}
-  \centering
-  \begin{tikzpicture}[node distance=6cm]
-  \node (a) [rect] {A Big Blue Block};
-  \node (b) [oval, right of=a] {And His Oval Friend};
-  \draw [line] (a) -- (b);
-  \end{tikzpicture}
-  \caption{Nice pictures}
-  \label{tikz:graphs}
-\end{figure}
+	The final Sprint was focused on project cleanup, as well as work on our accompanying minor dissertation. This time was spent implementing our research into the dissertation, as well as relevant images, graphs, blurbs and context to our approach.  
