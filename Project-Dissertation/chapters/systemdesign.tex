@@ -24,7 +24,12 @@ Red – Files relevant at the beginning of the project but less so now. \newline
     \item 10-Episode-Random - Contains the logic for running a simulation.
     \item 100-Episode-Random - Contains the logic for running a simulation.
     \item 10-Episode-Large - Contains the logic for running a simulation.
-    \item 10-Episode-Large - Contains the logic for running a simulation.
+    \item 100-Episode-Large - Contains the logic for running a simulation.
+    \item AimGoal - Script that pushes the players into better positions to score in the opposition goal - hard coded.
+    \item Keras-NN - Example of a Keras Neural Network in action.
+    \item PlayerController - Used at the start of the project to control the agent in the environment.
+    \item PPO.ipynb - Proximal Policty Optimization notebook in the hopes of finding a way to develop the Neural Network.
+    \item ppo.py - Python version of the above file.
 \end{itemize}
 
 \section{Unity Environment}
@@ -60,7 +65,6 @@ In the “Soccer-2” scene, more agents have been added to the pitch, making th
     \label{fig:soc2}
 \end{figure}
 
-%
 \subsection{Unity - Brain and Academy}
 \subsubsection{Academy}
 An Academy orchestrates all the Agent and Brain objects in a Unity scene. Every scene containing Agents must contain a single Academy~\cite{mlagentAcademy}. The object has many parameters that can be customized to suit the users needs, as can be seen here in fig \ref{fig:academy}. The Max Steps parameter indicate the total number of steps per-episode. 0 corresponds to episodes without a maximum number of steps. Once the step counter reaches maximum, the environment will reset~\cite{mlagentAcademy}. The next parameter is the training configuration, where the user can set the width and height of the window, the Quality Level which controls the quality of the simulation, the Time Scale which controls the speed of which the simulation is run and the Target Frame Rate which indicates the FPS you wish the simulation to maintain.
@@ -172,7 +176,3 @@ This notebook contains the same logic as the previous two, but uses a different 
 \subsubsection{100-Episode-Large-Soccer}
 Again, based on the previous notebook this one uses the same build and logic, only difference being that the episode counter is set to 100, and in turn giving us more output results.
 
-As many pages as needed.
-\begin{itemize}
-\item Architecture, UML etc. An overview of the different components of the system. Diagrams etc… Screen shots etc.
-\end{itemize}

@@ -2,13 +2,6 @@
 
 \chapter{Methodology}
 
-\begin{itemize}
-%\item Agile / incremental and iterative approach to development. Planning, meetings.
-\item What about validation and testing? Junit or some other framework.
-\item If team based, did you use GitHub during the development process.
-\item Selection criteria for algorithms, languages, platforms and technologies.
-\end{itemize}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=140mm, height=70mm]{img/timeline.PNG}
@@ -18,14 +11,14 @@
 
 \section{Overview}
 In this section we will review our approach to the project development, describe the methodology used and how it was implemented and how the development of the project progressed overall. At the conclusion of this methodology the reader should be left with a good sense of the project scale, as well as the steps taken throughout.
-
+\\
 For this project we wanted to use an iterative design process, so changes and issues could easily be kept track of and dealt with in an easy and efficient manner. As such we felt the Agile method to be the best fit for us, as one of the team members has had previous experience in industry during a summer internship. His first hand experience helped guide us throughout the project, and gave the rest of us a feel on how it may be like to work in industry in the future.
-
+\\
 The Agile method is a particular approach to project management, which is ubiquitous in the environment of Software Development. This method assists teams in responding to the unpredictability of constructing software, such as bugs in code, changing requirements from the client, etc. Agile uses incremental/iterative work sequences commonly known as Sprints, which is a period of time allocated for a particular phase of a project. Time is a precious resource when developing software, and as such a Sprint is considered complete once the time period expires. While some objectives set out for the Sprint may not have been realised, these additions will need to be put on the back burner in order to keep up with the Agile development cycle.
-
+\\
 While we liked the approach the Agile method allowed us to use, we did not adhere to it in the strictest of senses. For instance, we did not appoint someone to the role of Scrum Master, preferring a more group oriented approach to problem solving and troubleshooting. A Scrum Master would be more suited to an industry environment, where they could be used as a point of contact or cohesion between large teams with differing responsibilities.
-
-Another aspect of the Agile Methodology we utilized were "Stand ups". This is the term used for a daily progress meeting, traditionally held within a development area. These meetings are a quick way to gauge progress on individual aspects of a project, and are a great way to keep everyone informed and motivated. (once or twice a week for stand ups, library room, discuss work individually. Well informed anyways)
+\\
+Another aspect of the Agile Methodology we utilised were "Stand ups". This is the term used for a daily progress meeting, traditionally held within a development area. These meetings are a quick way to gauge progress on individual aspects of a project, and are a great way to keep everyone informed and motivated. (once or twice a week for stand ups, library room, discuss work individually. Well informed anyways)
 
 Some general principles of Agile include:
 
@@ -71,7 +64,11 @@ Some general principles of Agile include:
 	
 	An environment in Unity was created for our initial testing purposes, namely a small football pitch with translucent walls and a ceiling, so any chances of assets "escaping" the testing area were minimized. This environment also contained the two goals that would be used by the opposing teams. Next came the creation of other assets, namely the ball itself and the first agents. By now the project seemed to be taking shape. Next, we move onto integration and testing.
 	
+	During this sprint we started having code review session. These sessions would be held at the end of every week during the sprint. For this we booked a room in the library and reviewed each others code in-dept and made comments on what could be improved upon and what they could start working on next.
 	
+	One issue encountered during this sprint was in relation to ML-Agents, and how GitHub handles large files. This caused a blocking issue within the sprint, which meant all of the members of our team could not progress until this issue was resolved. 
+	
+	This issue was eventually resolved by adding the necessary folder to a public google drive address that anyone can access. The wiki on the GitHub page explains how to implement this folder into the project and contains a link to the google drive where it is stored.
 
 \section{Sprint 4: Integration and Testing}
 	Integration testing of ML-Agents, Unity, Notebooks, etc
@@ -82,10 +79,10 @@ Some general principles of Agile include:
 	
 	After some time testing and debugging we finally had all three individual components integrated into one cohesive application. During this time we passed random values to the agents in the environment, in order to test the robustness of the Jupyter Notebooks in passing values, and to see how the agents reacted in the environment.
 	
-	One issue encountered during this sprint was in relation to ML-Agents, and how GitHub handles large files. This caused a blocking issue within the sprint, which meant all of the members of our team could not progress until this issue was resolved. 
+	Another blocking issue arose during this sprint which saw the ML-Agents package receive a version update. This update brought a complete rework to the system and how all its components were implemented, including a change to the brains and academy which caused a big issue for us. This issue brought up the question of what to do going forward, were we to update to the newest version and re-write all we had up until now? Or would we stick to the previous version and continue to develop on that? 
 	
-	This issue was eventually resolved by adding the necessary folder to a public google drive address that anyone can access. The wiki on the GitHub page explains how to implement this folder into the project and contains a link to the google drive where it is stored.
-
+	In the end we decided against the update as it brought too many new changes in that would render all the work we had put in up until now unusable.
+	
 
 \section{Sprint 5: Functionality and Testing}
 	
@@ -97,4 +94,15 @@ Some general principles of Agile include:
 
 \section{Sprint 6: Cleanup \& Dissertation} 
 
-	The final Sprint was focused on project cleanup, as well as work on our accompanying minor dissertation. This time was spent implementing our research into the dissertation, as well as relevant images, graphs, blurbs and context to our approach.  
+	The final Sprint was focused on project cleanup, as well as work on our accompanying minor dissertation. This time was spent implementing our research into the dissertation, as well as relevant images, graphs, blurbs and context to our approach.
+
+
+\section{Testing}
+\subsection{Unit Testing}
+Unit Testing is a level of software testing where individual units or components of a software are tested. The purpose is to validate that each unit of the software performs as designed~\cite{unitTest}. We applied unit testing in the early stages of development when it came to testing the scripts we wrote for objects in our Unity scenes, such as moving the player by assessing how they moved with certain values, then changing those values to which suited best.
+
+\subsection{System Testing}
+System Testing is a level of software testing where a complete and integrated software is tested. The purpose of this test is to evaluate the system’s compliance with the specified requirements~\cite{systemTest}. We applied system testing in the closing stages of the Unity development of this project as we felt we had all the necessary pieces relevant for this area of the project. We tested how well the agent moved in the environment, how it worked with the ball, how it worked with the surrounding walls, the goals and the opposition.
+
+\subsection{Regression Testing}
+Regression Testing is a type of software testing that intends to ensure that changes (enhancements or defect fixes) to the software have not adversely affected it~\cite{regressionTest} ~\cite{regressionTesting}. This testing was applied in the latter stages of the project, when the Unity environment was ready and we could run the simulation directly from the notebook. This meant that we could make small changes to the notebook without it impacting the Unity environment as a whole.

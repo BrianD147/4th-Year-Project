@@ -1,19 +1,14 @@
 %!TEX root = project.tex
 
 \chapter{System Evaluation}
-As many pages as needed.
-\begin{itemize}
-\item Prove that your software is robust. How? Testing etc. 
-\item Use performance benchmarks (space and time) if algorithmic.
-\item Measure the outcomes / outputs of your system / software against the objectives from the Introduction.
-\item Highlight any limitations or opportunities in your approach or technologies used.
+
 
 \section{Testing}
 As mentioned above in the technology review, after looking into the possible testing tools available to /unity, we decided that it was best to do the majority of our testing through our notebooks. When running the simulations through the notebook it provided us with enough details that if something was to go wrong in the unity environment the notebook would be able to easily identify the problem, making it easier to troubleshoot it ourselves. Testing was constant throughout the project as for if we made any changes to the unity environment, the project would have to be rebuilt and the notebooks reran. Also due to the fact the python code in our notebooks were written into separate cells, it made it clearer to identify problems earlier on in the simulation.  We seen this as part of a regression testing technique, where the tester or developer reruns functional and non-functional tests to confirm that a recent program, or code change has not indirectly affected the existing features within the system. This allowed us to run certain cells in the form of a test case rather than to rerun the notebook as a whole, giving a clearer insight to which parts of the code would give us specific problems if they were to occur during development.
 
 \section{Notebook – Results}
 \subsection{Keras-NN}
-We used the notebooks to handle the machine learning side of thingst when it came to training the agents. 
+We used the notebooks to handle the machine learning side of things when it came to training the agents. 
 With this we had to research which libraries we would need in order to develop a neural network. After a lot of research, we decided on using the Keras, NumPy and Matplotlib open source libraries as these libraries best suited our objective. 
 
 With this decided, one of our team members developed a notebook which showed a Neural Network in action. For this example, we used the IMDB data set as it was already built into the Keras library. This data set contains around 25,000 movie reviews from the website IMBD, each labelled with a positive and negative review. Each review has been pre-processed and encoded as a sequence of word indexes. With this set we extract some samples, training data to test against the data set and training targets to achieve with that data. 
@@ -75,5 +70,3 @@ Similarly to the other 100 episode notebook, this is another notebook based on t
     \caption{Graph of rewards from the Agent - Large 100 Episode Random}
     \label{fig:100EpLarge}
 \end{figure}
-
-\end{itemize}

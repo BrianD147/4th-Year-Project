@@ -1,0 +1,84 @@
+%!TEX root = project.tex
+
+\appendix
+\begin{flushleft}
+\large\textbf{Github Repository Link}
+Below is a link for our github repository where the project is stored:
+
+\begin{minted}{console}
+    https://github.com/BrianD147/4th-Year-Project
+\end{minted}
+
+
+\large\textbf{Installation Guide}
+
+Download and install Anaconda for Windows using the following link:
+
+\begin{minted}{console}
+  https://www.anaconda.com/distribution/\#windows
+\end{minted}
+
+Once Anaconda is installed you will need to run Anaconda Navigator to finish the setup.
+
+After running Anaconda Navigator you can close it again. If environment variables were for some reason not created you will see error "conda is not recognized as internal or external command" when you type “conda” into the command line. To fix this type “environment variables” into the windows search bar, and You should see an option called “Edit the system environment variables”. From here click “Environment Variables” and double click “Path” under “System variable. Click “New” and add the following new paths:
+
+\begin{minted}{console}
+  %UserProfile%\Anaconda3\Scripts
+  %UserProfile%\Anaconda3\Scripts\conda.exe
+  %UserProfile%\Anaconda3
+  %UserProfile%\Anaconda3\python.exe
+\end{minted}
+
+Once this is all done, open the new “Anaconda Prompt” from the windows search bar. Then type in the following command:
+\begin{minted}{console}
+  conda create -n ml-agents python=3.6
+\end{minted}
+If you are asked to install any new packages simple type “y” and press enter.
+
+Now you’ll have to activate this new environment. In the same Anaconda Prompt type the following:
+\begin{minted}{console}
+  activate ml-agents
+\end{minted}
+
+Finally lets install TensorFlow using the “pip” package manager in Anaconda. To do so type the following command from the same Anaconda Prompt:
+
+\begin{minted}{console}
+  pip install tensorflow==1.7.1
+\end{minted}
+
+Now with all of that out of the way, we can move on to setting up the project files. Begin by cloning the GitHub repository, this can be done from the command line using the following command:
+
+\begin{minted}{console}
+  git clone https://github.com/BrianD147/4th-Year-Project
+\end{minted}
+
+Once the repo has been cloned, you will need to retrieve the ML-Agents assets folder from the following Google Drive link: 
+
+\begin{minted}{console}
+https://drive.google.com/open?id=1mqoev-1K-7lDgqTIGWRbmnrZZCFxhKZY
+\end{minted}
+
+This folder needs to be placed into the Assets folder of the project; this folder can be found here:
+
+\begin{minted}{console}
+  \4th-Year-Project\4th-Year-Project\{Assets\
+\end{minted}
+
+Now with the files set up, you can begin by running a notebook and observing the environment. Navigate to the 4th-Year-Project folder in the command line, and navigate into the notebooks folder using the following command:
+
+\begin{minted}{console}
+  cd notebooks
+\end{minted}
+
+Then type the following to run Jupyter:
+
+\begin{minted}{console}
+  jupyter notebook
+\end{minted}
+
+This will open a web browser, from here select the 10-Episode-Random.ipynb file, this is a notebook which will connect to the Unity environment and send random inputs to the agent. Press the “Restart the kernel and run all cells” option from the top of the window (the button is two arrows pointing to the right).
+
+When the configuration panel pops up, simple click “Play!”. (Note: if you are NOT using a graphics card it is recommended to lower the quality before running the environment)
+
+If you would like to view the project working using the internal C\# code, then simply open the Unity editor and run the “Soccer” scene. The C\# code will control the agents and replicate what the neural network aimed to achieve.
+\end{flushleft}
