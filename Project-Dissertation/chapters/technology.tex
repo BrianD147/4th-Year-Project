@@ -190,3 +190,32 @@ The fact that these tools are easily accessible from the Unity asset store, as w
 
 Our decision
 We decided the use of the Unity Test Tools would actually not be very useful, since the fact that the majority of the work being performed will be external to the Unity environment. Having test data from just the environment itself isn’t necessary for the type of project we are aiming to create.
+
+
+
+
+
+%new
+
+
+Docker
+Docker is a tool designed to help create, deploy and run applications. The tool uses containers to package all the necessary components, including libraries and other dependencies, into one single package. This means that any developer can rest assured the application will run on any machine.
+
+Why Docker
+Using Docker would allow us to focus on the coding and development of the project, without having to worry about the system that our application will ultimately be running on. Having everything packaged together would help with the final deployment of the project, guaranteeing the entire project would run on any system without a shadow of a doubt.
+
+Our Decision
+In the end we decided not to work using Docker, even though the tool is very intriguing and would be a major help running the project in the later stages, through some research we found complaints that the containers can be subject to performance overhead, and with our project, running the simulations at a consistent rate is very important. Also our project consists of multiple possible scenes and scenarios to run from multiple different notebooks, meaning that using Docker wouldn’t allow the final user to run whichever scenario they wishes, as Docker uses a single command to run it’s packages content, and doesn’t offer the ability to run multiple different parts of its package independently for the final user.
+
+
+Anaconda
+Anaconda is a free and open-source distribution of Python and R programming languages for scientific computing, including machine learning applications. The distribution aims to simplify package management and deployment, offering over 1400 data-science packages.
+Why Anaconda
+Anaconda would offer an easy and efficient way for us to gather the necessary packages for our machine learning needs. If we decide to use either Python or R as our programming language of choice, then Anaconda may be a great option for us.
+
+Our Decision
+We decided to utilise Anaconda since we are using Python to build the neural network side to our project. The distribution includes matplotlib, numpy, and keras, which we aim to also use in our project, meaning Anaconda will be very helpful in installing these packages.
+
+
+
+%new
