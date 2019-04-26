@@ -1,7 +1,6 @@
 %!TEX root = project.tex
 
 \chapter{Conclusion}
-About three pages.
 
 \section{Conclusion}
 This chapter will summarise the project in terms of the objectives of the initial proposal and will discuss the findings and outcomes of the project now it has concluded.
@@ -13,24 +12,19 @@ This project proposed the development of a 3d environment build in Unity consist
 The following shows our original objectives for the project, whether we managed to fulfill said objective, and a short comment on each objective, either how we managed to succeed or why we failed.
 
 \begin{itemize}
-    \item{Design a working 3d environment in Unity to best suit our needs
-[PASS]
+    \item{[PASS] - Design a working 3d environment in Unity to best suit our needs.
 Our aim to design a working 3D Unity environment to hold our agents in was successful, with a football pitch surrounded by clear walls working perfectly to house the AI agents and ball.}
 
-    \item{Find a way to connect Unity and python together, allowing for data to be transferred between both the environment and the external code
-[PASS]
+    \item{[PASS] - Find a way to connect Unity and python together, allowing for data to be transferred between both the environment and the external code.
 We managed to connect the Unity environment to external python scripts using Jupyter Notebooks, acting as a buffer in between both and providing a clean and easy to understand interface for running the code.}
 
-    \item{Pass movements into the Unity environment using the external code
-[PASS]
+    \item{[PASS] - Pass movements into the Unity environment using the external code.
 We successfully passed random actions from the Jupyter notebooks into the Unity environment, moving the agents to random positions on the field on each frame.}
 
-    \item{Pull observations from the Unity environment back into the external code
-[FAIL]
+    \item{[FAIL] - Pull observations from the Unity environment back into the external code.
 We failed to find a way of passing any observations from the Unity environment back into the Jupyter notebooks, and thus into any python scripts.}
 
-    \item{Control the agents using the external neural network
-[FAIL]
+    \item{[FAIL] - Control the agents using the external neural network.
 We were unable to control any agents from an external neural network due to the previous objective failure. Having no observations to supply as input to any neural network meant controlling the agents wasn't possible.}
 \end{itemize}
 
