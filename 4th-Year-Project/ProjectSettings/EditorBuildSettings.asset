@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Soccer.unity
     guid: c16452ff8593102448890ae6c9f2343e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Soccer-Rand-Enviro.unity
     guid: 6700e800455e7284fa9143a2ce976e1e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Soccer-2.unity
     guid: e347186270346d1429d927da2a96230c
   m_configObjects: {}

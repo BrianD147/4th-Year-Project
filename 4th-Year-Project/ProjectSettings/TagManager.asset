@@ -16,6 +16,8 @@ TagManager:
   - redGoalie
   - blueDefender
   - redDefender
+  - redPart
+  - bluePart
   layers:
   - Default
   - TransparentFX

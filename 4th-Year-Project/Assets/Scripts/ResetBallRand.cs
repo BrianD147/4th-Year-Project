@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ResetBall : MonoBehaviour {
+public class ResetBallRand : MonoBehaviour {
 
 	private GameObject canvas;
 	private ScoreTrack sc;
@@ -49,7 +49,7 @@ public class ResetBall : MonoBehaviour {
 			sc.BlueScore();
 			redScore.Play();
 			Debug.Log("Blue Goal!");
-			ResetPlayers();
+			//ResetPlayers();
         }
 
 		if (c.gameObject.tag == "blueGoal")
@@ -58,7 +58,7 @@ public class ResetBall : MonoBehaviour {
 			sc.RedScore();
 			blueScore.Play();
 			Debug.Log("Red Goal!");
-			ResetPlayers();
+			//ResetPlayers();
         }
     }
 
